@@ -34,7 +34,7 @@ The pre-processing steps can be skipped entirely and tutorial-ready data can be 
 ##### M/EEG
 Artefact-corrected grand-averaged data with forward models for all 16 subjects can be downloaded [!PENDING UPDATE! from figshare here.](https://figshare.com/articles/dataset/Face_processing_M_EEG_data_for_Dynamic_Causal_Modelling_Faces_vs_Scrambled_/21342066)
 
-Once processed DCM-ready data for both/either fMRI and M/EEG have been prepared, the `data/` folder should have the structure indicated in [./data/folder_structure.txt](https://github.com/pranaysy/MultimodalDCM/blob/main/data/filelist.txt)
+Once processed DCM-ready data for both/either fMRI and M/EEG have been prepared, the `data/` folder should have the structure indicated in [./data/filelist.txt](https://github.com/pranaysy/MultimodalDCM/blob/main/data/filelist.txt)
 
 ### List of modified SPM functions
   1. [`spm_fmri_concatenate.m`](https://github.com/pranaysy/MultimodalDCM/blob/main/code/modified_spm_functions/spm_fmri_concatenate.m): Function for concatenating fMRI data across runs. Updated to return the estimated SPM struct as a variable, original version only writes this variable to the disk and does not return a variable. The variable can be used by subsequent functions in a script.
