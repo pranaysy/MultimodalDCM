@@ -24,7 +24,7 @@ spm('asciiwelcome');
 %% Input arguments
 %==========================================================================
 rawpth = '/imaging/henson/Wakeman/ds000117'; % Directory containing the raw data
-outdir = '/imaging/henson/Wakeman/pranay_does_things/CBU_Neuroimaging_2024_Test_Reset';
+outdir = '/imaging/henson/Wakeman/pranay_does_things/4_projects/CBU_Neuroimaging_Multimodal_DCM_2024/master';
 scrpth = fullfile(outdir,'code');                     % Directory containing the SPM analysis scripts
 outpth = fullfile(outdir, 'data', 'derivatives',spm('Ver'));   % Output directory
 
