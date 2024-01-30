@@ -150,7 +150,7 @@ DCM.options.trials   = [1 2]; % Index of ERPs within ERP/ERF file
 DCM.options.Tdcm     = [0 400]; % Peri-stimulus time to be modelled
 
 % Specify between-condition trial effects
-contrasts = [0 1]'; % Face Perception: Scrambled vs Faces (Famous + Unfamiliar)
+contrasts = [-1 1]'; % Face Perception: Scrambled vs Faces (Famous + Unfamiliar)
 DCM.xU.X = contrasts; % Orientation is N_trials x N_contrasts
 DCM.xU.name = {'Face Perception'};
 
