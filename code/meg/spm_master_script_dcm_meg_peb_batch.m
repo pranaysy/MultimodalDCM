@@ -464,7 +464,7 @@ for n=1:n_models
     
     % Clone the template 'Full' model and set switches on the 'b' matrix
     DCM = DCM_Full;               
-    DCM.b(:,:,2) = [
+    DCM.B{1}(:,:) = [
         % bEVC lFFA rFFA
         [  s    b    b ];   % bEVC
         [  f    s    l ];   % lFFA
@@ -483,9 +483,9 @@ save(gcm_families_file, 'GCM')
 figure;
 for k=1:n_models
     subplot(4,4,k);
-    imagesc(GCM{1, k}.b(:,:,2) + 0.5*GCM{1, 1}.b(:,:,2));
-    xticklabels({DCM_Full.xY.name});
-    yticklabels({DCM_Full.xY.name});
+    imagesc(GCM{1, k}.B{1}(:,:) + 0.5*GCM{1, 1}.B{1}(:,:));
+    xticklabels(DCM_Full.Sname);
+    yticklabels(DCM_Full.Sname);
     colormap(gray)
     caxis([0, 1])
     title(sprintf('Model %02d', k))
