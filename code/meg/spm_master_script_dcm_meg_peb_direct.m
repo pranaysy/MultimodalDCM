@@ -356,52 +356,6 @@ spm_dcm_peb_review(BMA, GCM)
 
 %% -------------------------------------------------------------------------------------
 %
-%      .d8888b.                                                           
-%     d88P  Y88b                                                          
-%     888    888                                                          
-%     888         .d88b.  88888b.d88b.  88888b.   8888b.  888d888 .d88b.  
-%     888        d88""88b 888 "888 "88b 888 "88b     "88b 888P"  d8P  Y8b 
-%     888    888 888  888 888  888  888 888  888 .d888888 888    88888888 
-%     Y88b  d88P Y88..88P 888  888  888 888 d88P 888  888 888    Y8b.     
-%      "Y8888P"   "Y88P"  888  888  888 88888P"  "Y888888 888     "Y8888  
-%                                       888                               
-%                                       888                               
-%                                       888
-%
-%---------------------------------------------------------------------------------------
-% Perform Bayesian Model Comparison (BMC) for Full vs reduced Self-only models
-
-%---------------------------------------------------------------------------------------
-% STEP 1: Bayesian Model Selection
-%---------------------------------------------------------------------------------------
-
-% Construct model space with 'full' and 'self' models
-GCM = {DCM_Full, DCM_Self};
-
-% Save model space
-save(fullfile(fits_dir,'templates', 'GCMs', 'Full_vs_Self', 'GCM_Full_vs_Self.mat'), 'GCM')
-
-% Perform reduction of the nested 'self' model and estimate BMA
-[BMA, BMR] = spm_dcm_peb_bmc(PEB, GCM);
-
-% Write to disk
-save(fullfile(fits_dir, 'BMA_PEB_Full_vs_Self'), 'BMA')
-
-%---------------------------------------------------------------------------------------
-% STEP 2: Review estimated BMA
-%---------------------------------------------------------------------------------------
-spm_dcm_peb_review(BMA, GCM)
-
-%---------------------------------------------------------------------------------------
-% OUTPUTS
-%---------------------------------------------------------------------------------------
-% Running this section will produce the following output in the folder 'fits_dir'
-% 1. BMA file called 'BMA_PEB_Full_sv_Self.mat' under fits_dir
-%       This is the BMA obtained after taking a weighted average of the full and reduced
-%       self models. 
-
-%% -------------------------------------------------------------------------------------
-%
 %     8888888888                     d8b 888 d8b                   
 %     888                            Y8P 888 Y8P                   
 %     888                                888                       
