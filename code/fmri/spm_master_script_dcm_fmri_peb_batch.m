@@ -2,8 +2,8 @@
 % Group Dynamic Causal Modelling of the Face Perception Network using fMRI
 %---------------------------------------------------------------------------------------
 % This script consists of SPM and MATLAB code for fitting Dynamic Causal Models on fMRI
-% time courses. All analyses covered were presented as a tutorial at COGNESTIC-22 in
-% September 2022 at the MRC Cognition and Brain Sciences Unit. The script covers
+% time courses. All analyses covered were presented as a tutorial in
+% February 2024 at the MRC Cognition and Brain Sciences Unit. The script covers
 % specification of a single DCM, replication of this specified DCM to multiple subjects
 % (called a GCM) and fitting this 'group' DCM in parallel. Further, various ways to
 % perform inference at the group level using a hierarchical Bayesian framework called
@@ -27,15 +27,17 @@
 %---------------------------------------------------------------------------------------
 
 % A. Processed DCM-ready data can be obtained from:
-%   Yadav, Pranay; Henson, Rik (2022): Face processing fMRI data for Dynamic Causal
-%   Modelling. figshare. Dataset. https://doi.org/10.6084/m9.figshare.21333996.v2 
+%   Yadav, Pranay; Henson, Rik (2024). Dynamic Causal Modelling of Face Processing with
+%   fMRI and M/EEG. figshare. Dataset. https://doi.org/10.6084/m9.figshare.25192793.v1
+% Use the file: fMRI_DCMreadyData_VOI_TimeCourses.tar.xz from the FigShare link
 % If you are starting with this data, then skip the steps 'COMBINE' and 'VOI' since the
 % data are already concatenated across runs, & consist of extracted VOIs. After 'SETUP'
 % jump directly to 'DCM'
 
 % B. Processed volumes per run per subject can be obtained from:
-%   Henson, Rik (2022): fMRI Data. figshare. Dataset.
-%   https://doi.org/10.6084/m9.figshare.20936143.v2 
+%   Yadav, Pranay; Henson, Rik (2024). Dynamic Causal Modelling of Face Processing with
+%   fMRI and M/EEG. figshare. Dataset. https://doi.org/10.6084/m9.figshare.25192793.v1
+% Use the file: fMRI_ProcessedData_Individual_Runs.tar.xz from the FigShare link
 % These need to be processed further in order to fit DCMs. Steps include concatenation
 % across runs, followed by extraction of time courses from Volumes-of-Interest (VOI).
 % The sections 'COMBINE' and 'VOI' in this script cover these steps respectively.

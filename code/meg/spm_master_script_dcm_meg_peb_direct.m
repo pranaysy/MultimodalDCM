@@ -2,8 +2,8 @@
 % Group Dynamic Causal Modelling of the Face Perception Network using MEG
 %---------------------------------------------------------------------------------------
 % This script consists of SPM and MATLAB code for fitting Dynamic Causal Models on MEG
-% evoked responses. All analyses covered were presented as a tutorial at COGNESTIC-22 in
-% September 2022 at the MRC Cognition and Brain Sciences Unit. The script covers
+% evoked responses. All analyses covered were presented as a tutorial in
+% February 2024 at the MRC Cognition and Brain Sciences Unit. The script covers
 % specification of a single DCM, replication of this specified DCM to multiple subjects
 % (called a GCM) and fitting this 'group' DCM in parallel. Further, various ways to
 % perform inference at the group level using a hierarchical Bayesian framework called
@@ -27,9 +27,8 @@
 %---------------------------------------------------------------------------------------
 
 % A. Processed DCM-ready data can be obtained from:
-%   Yadav, Pranay; Henson, Rik (2022): Face processing M/EEG data for Dynamic Causal
-%   Modelling (Faces vs Scrambled). figshare. Dataset.
-%   https://doi.org/10.6084/m9.figshare.21342066.v1 
+%   Yadav, Pranay; Henson, Rik (2024). Dynamic Causal Modelling of Face Processing with
+%   fMRI and M/EEG. figshare. Dataset. https://doi.org/10.6084/m9.figshare.25192793.v1
 
 % B. Alternatively, raw data can be obtained from:
 %   Wakeman, D.G. & Henson, R.N. (2015). A multi-subject, multi-modal human neuroimaging
