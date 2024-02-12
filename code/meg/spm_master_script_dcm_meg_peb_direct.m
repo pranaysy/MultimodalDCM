@@ -84,7 +84,7 @@ spm('defaults','EEG');
 %---------------------------------------------------------------------------------------
 
 % Specify root working directory 
-base_dir = '/imaging/henson/Wakeman/pranay_does_things/4_projects/CBU_Neuroimaging_Multimodal_DCM_2024/master'; % Change this to yours
+base_dir = '/imaging/henson/Wakeman/pranay_does_things/4_projects/CBU_Neuroimaging_Multimodal_DCM_2024/sessionlive'; % Change this to yours
 addpath(genpath(fullfile(base_dir, 'code'))) % Add scripts & functions to workspace
 
 % All fits go in this directory
