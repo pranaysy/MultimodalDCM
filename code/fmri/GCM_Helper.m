@@ -1,5 +1,5 @@
 % Specify root working directory 
-base_dir = '/imaging/henson/Wakeman/pranay_does_things/4_projects/CBU_Neuroimaging_Multimodal_DCM_2024/master'; % Change this to yours
+base_dir = '/imaging/henson/Wakeman/pranay_does_things/4_projects/CBU_Neuroimaging_Multimodal_DCM_2024/preflight'; % Change this to yours
 
 % Assign operational directories to variables
 derpth = fullfile(base_dir, 'data','derivatives','SPM12');
@@ -21,7 +21,7 @@ outfile_full = fullfile(derpth, 'sub-15', 'fmri', 'CatGLM', 'DCM_Full.mat');
 GCM_name = 'Full';
 
 % Path to template folder: This is where specified GCM will be saved
-templatedir = fullfile(fits_dir, 'templates', 'GCMs', GCM_name);
+templatedir = fullfile(fits_dir, 'batch_gui', 'fmri', 'templates', 'GCMs', GCM_name);
 
 %---------------------------------------------------------------------------------------
 % STEP 2: Specify each subject's DCM from template DCM
