@@ -94,7 +94,7 @@ spm fmri
 %---------------------------------------------------------------------------------------
 
 % Specify root working directory 
-base_dir = '/imaging/henson/Wakeman/pranay_does_things/4_projects/CBU_Neuroimaging_Multimodal_DCM_2024/master'; % Change this to yours
+base_dir = '/imaging/henson/Wakeman/pranay_does_things/4_projects/CBU_Neuroimaging_Multimodal_DCM_2024/preflight'; % Change this to yours
 
 % Sub-directory containing scripts
 srcpth = fullfile(base_dir,'code');
@@ -145,7 +145,7 @@ TR = 2;
 numworkers = nsub; % Number of workers for distributed computing (depends on system)
 P = gcp('nocreate');
 if isempty(P)
-    P=cbupool(numworkers, '--mem-per-cpu=4G --time=12:00:00 --nodelist=node-j11');
+    P=cbupool(numworkers, '--mem-per-cpu=4G --time=12:00:00 --nodelist=node-j17');
     parpool(P, P.NumWorkers);
     % parpool(n_workers); % Run this line if not at the CBU
 else
