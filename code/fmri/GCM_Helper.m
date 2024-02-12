@@ -1,5 +1,5 @@
 % Specify root working directory 
-base_dir = '/imaging/henson/Wakeman/pranay_does_things/4_projects/CBU_Neuroimaging_Multimodal_DCM_2024/preflight'; % Change this to yours
+base_dir = '/imaging/henson/Wakeman/pranay_does_things/4_projects/CBU_Neuroimaging_Multimodal_DCM_2024/sessionlive'; % Change this to yours
 
 % Assign operational directories to variables
 derpth = fullfile(base_dir, 'data','derivatives','SPM12');
