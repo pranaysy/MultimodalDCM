@@ -581,7 +581,7 @@ covariate_name = 'Age';
 covariate_values = [31, 25, 30, 26, 23, 26, 31, 26, 29, 23, 24, 24, 25, 24, 30, 25]';
 
 % Mean-center the covariate (Optional)
-covariate_values = round(covariate_values - mean(covariate_values), 1);
+covariate_values = detrend(covariate_values, 0);
 
 %---------------------------------------------------------------------------------------
 % STEP 2: Setup jobfile and inputs 
